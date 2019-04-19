@@ -1,0 +1,24 @@
+#include<stdio.h>
+long factorial(int);
+int main()
+{
+    int n;
+    long f;
+    printf("Enter an integer to find it's factorial\n");
+    scanf("%d",&n);
+    if(n<0)
+        printf("Factorial of negative integer isn't defined.\n");
+    else
+    {
+        f = factorial(n);
+        printf("%d!=%1d\n",n,f);
+    }
+    return 0;
+}
+long factorial (int n)
+{
+    if(n==0)
+        return 1;
+    else
+        return(n*factorial(n-1));
+}
